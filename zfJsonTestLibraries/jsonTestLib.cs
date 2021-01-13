@@ -16,6 +16,18 @@ namespace zfJsonTestLibraries
             return jasonString;
         }
 
+        public string SerializeFormattedJsonToString(PolarisAccountHolder accountHolder)
+        {
+            //Can also use var here, I just chose to explicitly declare it
+            JsonSerializerOptions jsonOptions = new JsonSerializerOptions
+            {
+                //allows text to be indented to look nicer
+                WriteIndented = true
+            };
+            string jasonString = JsonSerializer.Serialize<PolarisAccountHolder>(accountHolder,jsonOptions);
+            return jasonString;
+        }
+
         public PolarisAccountHolder DeserializeJsonFromString(string accountHolderString)
         {
             PolarisAccountHolder accountHolder = JsonSerializer.Deserialize<PolarisAccountHolder>(accountHolderString);

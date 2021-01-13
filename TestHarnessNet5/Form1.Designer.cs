@@ -33,13 +33,14 @@ namespace TestHarnessNet5
             this.jsonTextBox = new System.Windows.Forms.TextBox();
             this.btnSaveToFile = new System.Windows.Forms.Button();
             this.btnDeserialize = new System.Windows.Forms.Button();
+            this.btnExecuteFormatted = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExecute
             // 
             this.btnExecute.Location = new System.Drawing.Point(32, 473);
             this.btnExecute.Name = "btnExecute";
-            this.btnExecute.Size = new System.Drawing.Size(206, 29);
+            this.btnExecute.Size = new System.Drawing.Size(162, 29);
             this.btnExecute.TabIndex = 0;
             this.btnExecute.Text = "Execute";
             this.btnExecute.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@ namespace TestHarnessNet5
             // 
             // jsonTextBox
             // 
-            this.jsonTextBox.Location = new System.Drawing.Point(32, 38);
+            this.jsonTextBox.Location = new System.Drawing.Point(41, 36);
             this.jsonTextBox.Multiline = true;
             this.jsonTextBox.Name = "jsonTextBox";
+            this.jsonTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.jsonTextBox.Size = new System.Drawing.Size(722, 410);
             this.jsonTextBox.TabIndex = 1;
             // 
@@ -65,25 +67,36 @@ namespace TestHarnessNet5
             // 
             // btnDeserialize
             // 
-            this.btnDeserialize.Location = new System.Drawing.Point(297, 473);
+            this.btnDeserialize.Location = new System.Drawing.Point(384, 473);
             this.btnDeserialize.Name = "btnDeserialize";
-            this.btnDeserialize.Size = new System.Drawing.Size(206, 29);
+            this.btnDeserialize.Size = new System.Drawing.Size(158, 29);
             this.btnDeserialize.TabIndex = 3;
             this.btnDeserialize.Text = "Deserialize";
             this.btnDeserialize.UseVisualStyleBackColor = true;
             this.btnDeserialize.Click += new System.EventHandler(this.btnDeserialize_Click);
+            // 
+            // btnExecuteFormatted
+            // 
+            this.btnExecuteFormatted.Location = new System.Drawing.Point(204, 473);
+            this.btnExecuteFormatted.Name = "btnExecuteFormatted";
+            this.btnExecuteFormatted.Size = new System.Drawing.Size(168, 29);
+            this.btnExecuteFormatted.TabIndex = 4;
+            this.btnExecuteFormatted.Text = "Execute / Formatted";
+            this.btnExecuteFormatted.UseVisualStyleBackColor = true;
+            this.btnExecuteFormatted.Click += new System.EventHandler(this.btnExecuteFormatted_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 528);
+            this.Controls.Add(this.btnExecuteFormatted);
             this.Controls.Add(this.btnDeserialize);
             this.Controls.Add(this.btnSaveToFile);
             this.Controls.Add(this.jsonTextBox);
             this.Controls.Add(this.btnExecute);
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -96,6 +109,7 @@ namespace TestHarnessNet5
         private System.Windows.Forms.TextBox jsonTextBox;
         private System.Windows.Forms.Button btnSaveToFile;
         private System.Windows.Forms.Button btnDeserialize;
+        private System.Windows.Forms.Button btnExecuteFormatted;
     }
 }
 
